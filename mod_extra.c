@@ -21,7 +21,7 @@ static switch_status_t filter_recv_dtmf_hook(switch_core_session_t *session, con
         }
     }
     
-    return SWITCH_STATUS_SUCCESS;
+    return SWITCH_STATUS_NOUNLOAD;
 }
 
 SWITCH_STANDARD_APP(filter_dtmf)
