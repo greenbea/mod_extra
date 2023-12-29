@@ -36,7 +36,7 @@ SWITCH_STANDARD_APP(filter_dtmf)
             return;
         }
 
-        switch_channel_set_private(channel, "__filter_dtmf__", strdup(data));
+        switch_channel_set_private(channel, "__filter_dtmf__", switch_core_session_strdup(session, data));
         switch_core_event_hook_add_recv_dtmf(session, filter_recv_dtmf_hook);
     }
 }
